@@ -1,4 +1,3 @@
-# rsschool-cv
-
-https://arsttws.github.io/rsschool-cv/cv
-https://arsttws.github.io/rsschool-cv/
+# cv is here 
+--->>>
+https://arsttws.github.io/cv/cv
