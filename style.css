@@ -40,13 +40,20 @@
 .employment{
     margin-bottom: 30px;
     font-size: 16px;
-    color: var(--headline-text-color);
 }
 .name p{
     font-size: var(--headline-text-size);
     font-family: josefin;
     color: var(--headline-text-color);
     width: fit-content;
+}
+.name p::after{
+    content: '';
+    display: flex;
+    width: 100%;
+    background: var(--headline-text-color);
+    height: 2px;
+    margin-bottom: 10px;
 }
 .info{
     max-width: 500px;
