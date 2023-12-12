@@ -1,0 +1,213 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/montserrat/Montserrat-Medium.ttf); 
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: dela;
+    src: url(fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf); 
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: josefin;
+    src: url(fonts/Josefin_Sans/static/JosefinSans-Bold.ttf); 
+    font-weight: 800;
+    font-style: normal;
+}
+* {
+    max-width: 100%;
+    font-size: 16px;
+    color: rgb(74 74 74);
+    font-family: montserrat;
+    flex: content;  
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+}
+header{
+    background-color: rgba(80, 155, 165, 0.562);
+    height: 60px;
+}
+h2{
+    font-family: josefin;
+    font-size: 22px;
+    color: rgba(80, 155, 165, 0.562);
+    line-height: 45px;
+}
+.creator-name-img{
+    align-items: center;
+    display: flex;
+    margin-bottom: 40px;
+}
+.creator-name-img span::before{
+    display: block;
+    width:100px;
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #000;
+}
+span{
+    font-family: montserrat;
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: rgb(210, 210, 210);
+    line-height: 90px;
+}
+.main{
+    padding-top: 20px;
+}
+nav{
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+}
+nav a{
+    padding: 0 30px;
+    text-decoration: none;
+    font-size: 14px;
+}
+nav a:hover{
+    color: #fff;
+}
+.first-nav-items{
+    max-width: fit-content;
+}
+.creator-name-img h2{
+    font-family: dela;
+    letter-spacing: 6px;
+    font-size: 22px;
+}
+.creator-avatar{
+border-radius: 100px;
+width: 200px;
+height: 200px;
+}
+.sides-items{
+    display: flex;
+}
+.contacts-items p{
+    padding: 5px 0;
+}
+.contacts{
+    padding-bottom: 40px;
+}
+.skills p{
+    padding: 5px 0;
+}
+.skills-prog{
+    margin-bottom: 20px;
+}
+.skills-prog .html::after, .skills-prog .css::after, .skills-prog .photoshop::after, .skills-prog .xd::after, .skills-prog .figma::after, .languages .eng::after{
+    width: 100px;
+    content: '';
+    position: absolute;
+    height: 10px;
+    background: linear-gradient(to left,
+    rgb(210, 210, 210) 25%, rgba(80, 155, 165) 25% 50%, rgba(80, 155, 165) 50% 75%, rgba(80, 155, 165) 75% );
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.skills-prog .git::after{
+    width: 100px;
+    content: '';
+    position: absolute;
+    height: 10px;
+    background: linear-gradient(to left,
+    rgb(210, 210, 210) 25%, rgb(210, 210, 210) 25% 50%, rgb(80 155 165) 50% 75%, rgba(80, 155, 165) 75% );
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.skills-prog .github::after {
+    width: 100px;
+    content: '';
+    position: absolute;
+    height: 10px;
+    background: linear-gradient(to left,
+    rgb(210, 210, 210) 25%, rgb(80 155 165) 25% 50%, rgb(80 155 165) 50% 75%, rgba(80, 155, 165) 75% );
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.languages .rus::after{
+    width: 100px;
+    content: '';
+    position: absolute;
+    height: 10px;
+    background: rgb(80 155 165);
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.languages .pol::after, .skills-prog .js::after{
+    width: 100px;
+    content: '';
+    position: absolute;
+    height: 10px;
+    background: linear-gradient(to left,
+    rgb(210, 210, 210) 25%, rgb(210, 210, 210) 25% 50%, rgb(210, 210, 210) 50% 75%, rgba(80, 155, 165) 75% );
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.languages{
+    margin-bottom: 40px;
+}
+.projects{
+    padding-top: 10px;
+}
+.projects p{
+padding: 5px 0;
+}
+.about-creator{
+    margin-bottom: 40px;
+}
+.code-examples{
+    margin-bottom: 40px;
+}
+.footer-container{
+    display: flex;
+    margin-top: 40px;
+}
+@media screen and (max-width: 980px){
+    *{
+        overflow-x: hidden;
+    }
+    .sides-items{
+        display: block;
+    }
+    .wrapper{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 760px){
+    header{
+        background-color: rgba(80, 155, 165, 0.562);
+        height: 120px;
+    }
+    nav{
+        display: block;
+    }
+    .first-nav-items{
+        padding-top: 10px;
+    }
+    .second-nav-items{
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 640px){
+    .creator-name-img{
+        display: block;
+    }
+    .wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 24em
+    }
+}
