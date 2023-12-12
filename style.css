@@ -13,8 +13,9 @@
     font-display: swap;
 }
 :root {
-    --headline-text-color: rgb(33, 167, 155);
+    --headline-text-color: rgba(80, 155, 165, 0.562);
     --headline-text-size: 28px;
+    
   }
 
 *{
@@ -107,7 +108,7 @@ ul li span a:hover{
 }
 .progress{
     position: absolute;
-    background-color: var(--headline-text-color);
+    background-color: rgba(80, 155, 165);
     height: 10px;
 }
 .skill{
