@@ -6,6 +6,13 @@
     font-display: swap;
 }
 @font-face {
+    font-family: "montserratL";
+    src: url(/fonts/montserrat/Montserrat-Light.ttf);
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
     font-family: "josefin";
     src: url(/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
     font-weight: 700;
@@ -15,7 +22,6 @@
 :root {
     --headline-text-color: rgba(80, 155, 165, 0.562);
     --headline-text-size: 28px;
-    
   }
 
 *{
@@ -125,4 +131,43 @@ ul li span a:hover{
 }
 .frameworks{
     margin-bottom: 30px;
+}
+.languages{
+    margin-top: 50px;
+}
+.languages .lang{
+    padding: 10px;
+}
+.project-info{
+    margin-left: 20px;
+    cursor: pointer;
+}
+.project-info:hover img{
+    transform: scale(1.2);
+}
+.project-description{
+    display: none;
+    margin-top: 10px;
+    border: 2px solid var(--headline-text-color);
+    max-width: 440px;
+    transition: all .3s ease-in-out;
+}
+.project-description.active{
+    display: block;
+}
+.project-description p{
+    padding: 10px;
+    font-size: 14px;
+    color: #757575;
+    font-family: Montserrat;
+    font-weight: 100;
+}
+.project-description p ul li{
+    font-size: 14px;
+    color: #757575;
+    font-family: Montserrat;
+    font-weight: 100;
+}
+.project-info.active img{
+    transform: rotate(180deg);
 }
