@@ -1,27 +1,10 @@
-@font-face {
-    font-family: "montserrat";
-    src: url(/fonts/montserrat/Montserrat-Medium.ttf);
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "montserratL";
-    src: url(/fonts/montserrat/Montserrat-Light.ttf);
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "josefin";
-    src: url(/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 :root {
     --headline-text-color: rgba(80, 155, 165, 0.562);
     --headline-text-size: 28px;
+    --light-green: #7edab849;
+    --bright-green: #09A56D;
   }
 
 *{
@@ -29,56 +12,81 @@
     padding: 0;
     box-sizing: border-box;
     outline: 0;
-    font-family: montserrat;
-    color: #252424;
+    font-family: 'Montserrat', sans-serif;
+    color: #29292C;
+}
+h2{
+    font-size: var(--headline-text-size);
+    font-family: 'Jost', sans-serif;
+    width: fit-content;
+    margin-bottom: 25px;
+}
+h2::after{
+    content: '';
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background: #29292C;
+}
+a{
+    font-size: 18px;
+    text-decoration: none;
+}
+a:hover{
+    color: var(--bright-green);
 }
 .wrapper{
-    max-width: 1024px;
+    max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    margin-top: 60px;  
 }
 .main{
     display: flex;
 }
+.contacts p img{
+    margin-right: 10px;
+}
+.employment{
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #56A387;
+}
+.right-side{
+    padding-left: 50px;
+}
 .about{
     margin-top: 100px;
 }
-.employment{
-    margin-bottom: 30px;
-    font-size: 16px;
-}
-.name p{
-    font-size: var(--headline-text-size);
-    font-family: josefin;
-    color: var(--headline-text-color);
-    width: fit-content;
-}
-.name p::after{
-    content: '';
-    display: flex;
-    width: 100%;
-    background: var(--headline-text-color);
-    height: 2px;
+.name h2{
+    font-size: 32px;
     margin-bottom: 10px;
+}
+.name h2::after{
+    width: 40%;
+    height: 2px;
+    border-radius: 2px;
+}
+.additional, .additional div{
+    display: flex;
+}
+.additional div img{
+    margin-right: 10px;
+}
+.additional div:first-child{
+    margin-right: 40px;
 }
 .info{
     max-width: 500px;
     margin-bottom: 60px;
+    margin-top: 40px;
 }
 /* .info p{
     color: #a4a4a4;
 } */
-.headline{
-    font-size: var(--headline-text-size);
-    font-family: josefin;
-    color: var(--headline-text-color);
-    width: fit-content;
-    margin-bottom: 10px;
-}
 ul li{
     color: var(--headline-text-color);
     padding: 5px;
+    margin-left: 20px;
 }
 ul li span a{
     text-decoration: none;
@@ -86,54 +94,59 @@ ul li span a{
 ul li span a:hover{
     color: var(--headline-text-color);
 }
-.right-side{
-    margin-right: 0;
-    margin-left: auto;
+.left-side{
+    background-color: #7edab841;
+    max-width: 360px;
+    padding-left: 20px;
+    padding-top: 30px;
 }
-.right-side .image img{
-    max-width: 240px;
-    border-radius:120px;
+.left-side .image img{
+    max-width: 260px;
+    border-radius:10px;
 }
-.right-side .image{
+.left-side .image{
     margin-bottom: 40px;
+    margin-left: 10px;
 }
 .contacts p{
     font-size: var(--headline-text-size);
     color: var(--headline-text-color);
     font-family: josefin;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .contacts{
     margin-bottom: 60px;
 }
 .bar-container{
     width: 280px;
-    background-color: #a4a4a4;
+    background-color: #8B8B8B;
+    opacity: .5;
     height: 10px;
+    border-radius: 5px;
     position: relative;
 }
 .progress{
     position: absolute;
-    background-color: rgba(80, 155, 165);
+    background-color: var(--bright-green);
     height: 10px;
+    border-radius: 5px;
 }
 .skill{
     padding: 10px;
 }
 .projects{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 .education{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
-.langs{
-    margin-bottom: 30px;
-}
-.frameworks{
-    margin-bottom: 30px;
+.courses{
+    margin-bottom: 40px;
 }
 .languages{
     margin-top: 50px;
+    margin-bottom: 40px;
 }
 .languages .lang{
     padding: 10px;
@@ -170,4 +183,8 @@ ul li span a:hover{
 }
 .project-info.active img{
     transform: rotate(180deg);
+}
+.right-side{
+    margin-right: 0;
+    margin-left: auto;
 }
