@@ -36,7 +36,7 @@ a:hover{
     color: var(--bright-green);
 }
 .wrapper{
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
     margin: 0 auto;
 }
@@ -50,9 +50,6 @@ a:hover{
     margin-bottom: 10px;
     font-size: 28px;
     color: #56A387;
-}
-.right-side{
-    padding-left: 50px;
 }
 .about{
     margin-top: 100px;
@@ -96,7 +93,7 @@ ul li span a:hover{
 }
 .left-side{
     background-color: #7edab841;
-    max-width: 360px;
+    max-width: 320px;
     padding-left: 20px;
     padding-top: 30px;
 }
@@ -118,7 +115,7 @@ ul li span a:hover{
     margin-bottom: 60px;
 }
 .bar-container{
-    width: 280px;
+    width: 260px;
     background-color: #8B8B8B;
     opacity: .5;
     height: 10px;
@@ -187,4 +184,21 @@ ul li span a:hover{
 .right-side{
     margin-right: 0;
     margin-left: auto;
+    padding-left: 50px;
+    position: relative;
+}
+.change-lang{
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.change-lang a{
+    padding: 10px;
+}
+.active-page-language{
+    color: var(--bright-green);
+}
+.about-myself{
+    max-width: 500px;
 }
