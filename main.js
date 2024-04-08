@@ -1,24 +1,13 @@
-const arrow1 = document.querySelector('.pi1');
-const arrow2 = document.querySelector('.pi2');
-const arrow3 = document.querySelector('.pi3');
-const arrow4 = document.querySelector('.pi4');
+  let projectInfos = document.querySelectorAll('.project-info');
 
-arrow1.addEventListener('click', () => {
-    document.querySelector('.pd1').classList.toggle('active')
-    document.querySelector('.pi1').classList.toggle('active')
-})
+  projectInfos.forEach(function(projectInfo) {
+    projectInfo.addEventListener('click', function() {
 
-arrow2.addEventListener('click', () => {
-    document.querySelector('.pd2').classList.toggle('active')
-    document.querySelector('.pi2').classList.toggle('active')
-})
+      let listItem = this.closest('li');
+      let projectDescription = listItem.querySelector('.project-description');
+      let projectInfo = listItem.querySelector('.project-info');
 
-arrow3.addEventListener('click', () => {
-    document.querySelector('.pd3').classList.toggle('active')
-    document.querySelector('.pi3').classList.toggle('active')
-})
-
-arrow4.addEventListener('click', () => {
-    document.querySelector('.pd4').classList.toggle('active')
-    document.querySelector('.pi4').classList.toggle('active')
-})
+      projectDescription.classList.toggle('active');
+      projectInfo.classList.toggle('active');
+    });
+  });
