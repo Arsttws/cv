@@ -51,13 +51,23 @@ body {
     &.select-lang {
         &.wrapper {
             max-width: fit-content;
+            h1 {
+                margin-bottom: 10px;
+            }
             .items {
+                display: flex;
+                gap: 10px;
                 a {
-                    padding: 5px 10px;
+                    display: flex;
+                    width: 40px;
+                    height: 30px;
+                    align-items: center;
+                    justify-content: center;
                     border-radius: 5px;
                     background: rgba(64, 195, 164, .3);
                     &:hover {
                         background: var(--main);
+                        color: #fff;
                     }
                 }
             }
