@@ -126,6 +126,16 @@ p {
             color: var(--main);
         }
     }
+    &.age {
+        display: flex;
+        gap: 10px;
+        &::after {
+            content: '\e908';
+            font-family: icon;
+            font-size: 18px;
+            color: var(--main);
+        }
+    }
 }
 a {
     text-decoration: none;
@@ -195,7 +205,7 @@ header {
         p {
             &.position {
                 &::before {
-                    content: '';
+                    content: none;
                 }
                 &::after {
                     content: '\e907';
@@ -206,7 +216,7 @@ header {
             }
             &.location {
                 &::before {
-                    content: '';
+                    content: none;
                 }
                 &::after {
                     content: '\e901';
@@ -215,7 +225,7 @@ header {
                     color: var(--main);
                 }
             }
-            &:first-of-type {
+            &:not(:last-of-type) {
                 margin-bottom: 5px;
             }
         }
@@ -317,6 +327,9 @@ main {
                         }
                         ul {
                             list-style-position: inside;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
                             li {
                                 &::marker {
                                     color: var(--main);
@@ -369,4 +382,70 @@ main {
             }
         }
     }
+}
+@media screen and (max-width: 1279px) {
+    body {
+        /* background: rgba(64, 195, 164, .3); */
+        &.wrapper {
+            max-width: calc(100% - 40px);
+            &::before {
+                content: none;
+            }
+        }
+    }
+    .level {
+        .bar {
+            background: rgba(64, 195, 164, .3);
+        }
+    }
+    main {
+        flex-direction: column;
+        margin-top: 20px;
+        .left {
+            max-width: unset;
+            > div {
+                .items {
+                    a {
+                        max-width: fit-content;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    h1 {
+        text-align: right;
+    }
+    main {
+        flex-direction: column;
+        margin-top: 20px;
+        .left {
+            padding: 0;
+        }
+        .right {
+            section {
+                .items {
+                    gap: 40px;
+                    .item {
+                        flex-direction: column;
+                        .info {
+                            max-width: unset;
+                            display: grid;
+                            grid-template-columns: repeat(2, auto);
+                            gap: 0 20px;
+                            width: fit-content;
+                            h3 {
+                                grid-column: span 2;
+                            }
+                            p {
+                                width: fit-content;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
