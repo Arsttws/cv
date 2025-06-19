@@ -262,6 +262,9 @@ main {
                     &.phone::before {
                         content: '\e903';
                     }
+                    &.tg::before {
+                        content: '\e904';
+                    }
                     &.git::before {
                         content: '\e900';
                     }
