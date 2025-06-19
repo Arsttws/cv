@@ -402,6 +402,7 @@ main {
         flex-direction: column;
         margin-top: 20px;
         .left {
+            padding: 0;
             max-width: unset;
             > div {
                 .items {
@@ -418,11 +419,6 @@ main {
         text-align: right;
     }
     main {
-        flex-direction: column;
-        margin-top: 20px;
-        .left {
-            padding: 0;
-        }
         .right {
             section {
                 .items {
