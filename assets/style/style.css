@@ -282,6 +282,17 @@ main {
                         content: '\e905';
                     }
                 }
+                p.projects {
+                    margin-top: 10px;
+                    a {
+                        display: inline;
+                        color: var(--main);
+                        font-weight: 600;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
             }
         }
         .other-skills {
